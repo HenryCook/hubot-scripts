@@ -20,7 +20,6 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Salt API tool')
     parser.add_argument('-p', '--ping', action='store', help='Ping a Salt Minion from the Salt Master')
     parser.add_argument('-r', '--run_puppet', action='store', help='Run Puppet on a Salt Minion')
-    parser.add_argument('-t', '--token', action='store_true', help='Print the requested Salt API auth token')
     parser.add_argument('-d', '--disable-ssl-verification', action='store_true', help='Disables SSL verification')
     args = parser.parse_args()
     return args
@@ -81,8 +80,6 @@ def main():
         run_puppet()
     elif args.ping:
         ping_minion()
-    elif args.token:
-        print("Temporary Salt API auth token: " + auth_salt_api())
     else:
         sys.exit()
     pass

@@ -14,7 +14,6 @@ I wanted to be able to use Salt API to use `cmd.run` for remote execution on Sal
 
 - Executing Puppet runs
 - Pinging a Salt Minion
-- Generating a Salt API token
 
 
 ## Usage
