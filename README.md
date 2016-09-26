@@ -4,7 +4,7 @@ Various Hubot scripts
 
 ## Reason
 
-After perusing the currently available [hubot-scripts via the official GitHub repo](https://github.com/hubot-scripts) I realised there were a few I needed that either didn't exist or hadn't been shared publically, so I thought I'd try my hand at writing my own and share my creations.
+After perusing the currently available [hubot-scripts via the official GitHub repo](https://github.com/hubot-scripts) I realised there were a few I needed that either didn't exist, or hadn't been shared publically. So I thought I'd try my hand at writing my own and share my creations.
 
 
 ## Usage
