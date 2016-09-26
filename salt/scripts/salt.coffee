@@ -16,7 +16,7 @@
 #   <https://docs.saltstack.com/en/latest/ref/netapi/all/salt.netapi.rest_cherrypy.html>
 #
 # Author:
-#   HenryCook <henry@forward3d.com>
+#   HenryCook <henry@havingatinker.uk>
 
 {spawn, exec}  = require 'child_process'
 module.exports = (robot) ->

@@ -5,6 +5,7 @@ import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 import argparse
 
+# Checks to see if the required environment variables had been set
 try:
     salt_api_endpoint = os.environ['SALT_API_ENDPOINT']
     salt_api_user = os.environ['SALT_API_USER']
