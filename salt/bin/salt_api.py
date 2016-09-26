@@ -53,7 +53,7 @@ def ping_minion():
     try:
         ping_minion = requests.post(salt_api_endpoint, data=body, headers=headers, verify=False)
         response = ping_minion.content
-        print(response)
+        print("The Salt Master was able to successfully ping " + ping_tgt)
     except:
         print("The Salt Master is unable to ping the Salt Minion")
 
@@ -69,7 +69,7 @@ def run_puppet():
         print("Running Puppet on" + puppet_tgt)
         puppet_minion = requests.post(salt_api_endpoint, data=body, headers=headers, verify=False)
         response = puppet_minion.content
-        print(response)
+        print("Puppet has finished running on " + puppet_tgt)
     except:
         print("Unable to run Puppet on the Salt Minion")
 
