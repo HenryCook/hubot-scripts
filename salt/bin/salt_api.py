@@ -82,7 +82,7 @@ def main():
     elif args.ping:
         ping_minion()
     elif args.token:
-        print("The Salt API auth token is: " + auth_salt_api())
+        print("Temporary Salt API auth token: " + auth_salt_api())
     else:
         sys.exit()
     pass
