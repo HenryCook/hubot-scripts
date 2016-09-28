@@ -62,5 +62,13 @@ You can install the relevat dependencies needed for the script/module via it's `
 
 ## To Do
 
-- Create an input prompt for Salt Puppet run, as you are currently able to use wildcards without prompting to make sure you want to do this.
-- Elasticsearch index removal
+- Salt
+	- Create an input prompt for Salt Puppet run, as you are currently able to use wildcards without prompting to make sure you want to do this.
+    - Remove Salt Minion key from master
+    - Remove node from Puppet Master
+
+- Elasticsearch
+    - Remove Elasticsearch index
+
+- Sensu
+    - Remove client from Sensu
