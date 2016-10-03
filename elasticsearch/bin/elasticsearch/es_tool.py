@@ -9,7 +9,7 @@ import modules.indices as indices
 
 # Arguments for script
 def parse_args():
-    parser = argparse.ArgumentParser(description='Salt API tool')
+    parser = argparse.ArgumentParser(description='Elasticsearch Tool')
     parser.add_argument('-l', '--list-all-indices', action='store_true', help='Lists all indices from Elasticsearch cluster')
     parser.add_argument('-d', '--delete-index', action='store', help='Remove index from Elasticsearch cluster')
     args = parser.parse_args()
