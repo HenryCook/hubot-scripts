@@ -29,6 +29,22 @@ I wanted to be able to use Salt API to use `cmd.run` for remote execution on Sal
 	                        Disables SSL verification	
 
 
+### Elasticsearch
+
+	$ ./es_tool.py --help
+
+	usage: es_tool.py [-h] [-l] [-d DELETE_INDEX]
+
+	Elasticsearch Tool
+
+	optional arguments:
+	  -h, --help            show this help message and exit
+	  -l, --list-all-indices
+	                        Lists all indices from Elasticsearch cluster
+	  -d DELETE_INDEX, --delete-index DELETE_INDEX
+	                        Remove index from Elasticsearch cluster
+
+
 ## Usage
 
 ### Structure
@@ -68,7 +84,13 @@ You can install the relevat dependencies needed for the script/module via it's `
     - Remove node from Puppet Master
 
 - Elasticsearch
-    - Remove Elasticsearch index
+    - Look into ssl warnings if you're not verifying ssl cert
+    - Add option for auth, for when you require credentials
 
 - Sensu
     - Remove client from Sensu
+
+
+## Side note
+
+I am more than happy to take PR's so please feel free to add something if you feel it's missing something.
