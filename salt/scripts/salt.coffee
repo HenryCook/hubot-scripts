@@ -25,6 +25,6 @@ module.exports = (robot) ->
       msg.send stdout
 
   robot.respond /salt puppet ([^ ]+)\s*(\w*)/i, (msg) ->
-    c = "/opt/hubot/bin/salt/salt_api.py --run_puppet "+ msg.match[1]
+    c = "/opt/hubot/bin/salt/salt_api.py --run-puppet "+ msg.match[1]
     exec c, (err, stdout, stderr) ->
       msg.send stdout

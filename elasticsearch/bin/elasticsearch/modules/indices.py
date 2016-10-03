@@ -3,7 +3,7 @@ def delete(args, conn):
     index_to_remove = args.delete_index
 
     conn.indices.delete(index=index_to_remove)
-    print(index_to_remove + " has been removed")
+    print("'" + index_to_remove + "'" + " has been removed")
 
 
 def list_all(conn):
