@@ -1,5 +1,5 @@
-import sys
 import os
+import sys
 
 # Checks to see if the required environment variables had been set
 try:

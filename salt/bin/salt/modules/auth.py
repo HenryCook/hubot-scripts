@@ -1,6 +1,7 @@
+import environment
+
 import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
-import environment
 
 
 # Generates Salt API token and returns it

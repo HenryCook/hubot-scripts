@@ -1,9 +1,10 @@
 #!/usr/bin/env python
+import argparse
+import sys
+
 import modules.auth as auth
 import modules.network as network
 import modules.puppet as puppet
-import argparse
-import sys
 
 
 # Arguments for script

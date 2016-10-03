@@ -1,5 +1,6 @@
-import requests
 import environment
+
+import requests
 
 
 # Runs Puppet on requested Salt Minions

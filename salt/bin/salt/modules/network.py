@@ -1,5 +1,6 @@
-import requests
 import environment
+
+import requests
 
 
 # Pings a Salt Minion from Salt Master
