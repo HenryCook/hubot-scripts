@@ -13,4 +13,4 @@ def run(args, api_token):
         requests.post(environment.salt_api_endpoint, data=body, headers=headers, verify=False)
         print("Puppet has finished running on " + puppet_tgt)
     except:
-        print("Unable to run Puppet on the Salt Minion")
+        print("Unable to run Puppet on " + puppet_tgt)

@@ -27,7 +27,6 @@ def main():
         sys.exit(2)
 
     if args.run_puppet:
-        print("Attempting to run Puppet on " + args.run_puppet)
         puppet.run(args, api_token)
     elif args.ping:
         network.ping_minion(args, api_token)
