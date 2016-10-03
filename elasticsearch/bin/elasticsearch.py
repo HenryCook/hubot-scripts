@@ -1,8 +1,9 @@
 #!/usr/bin/env python
-import modules.indices as indices
-import modules.connection as connection
 import argparse
 import sys
+
+import modules.connection as connection
+import modules.indices as indices
 
 
 # Arguments for script

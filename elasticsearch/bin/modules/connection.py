@@ -1,5 +1,5 @@
 from elasticsearch import Elasticsearch
-from elasticsearch import helpers
+
 import environment
 
 
