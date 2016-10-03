@@ -18,8 +18,12 @@ module.exports = (robot) ->
     c = "/opt/hubot/bin/elasticsearch/es_tool.py --list-all-indices "
     exec c, (err, stdout, stderr) ->
       msg.send stdout
+      msg.send stderr
+      msg.send err
 
   robot.respond /elasticsearch remove index ([^ ]+)\s*(\w*)/i, (msg) ->
     c = "/opt/hubot/bin/elasticsearch/es_tool.py --delete-index "+ msg.match[1]
     exec c, (err, stdout, stderr) ->
       msg.send stdout
+      msg.send stderr
+      msg.send err

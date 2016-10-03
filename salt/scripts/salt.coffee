@@ -23,8 +23,12 @@ module.exports = (robot) ->
     c = "/opt/hubot/bin/salt/salt_api.py --ping "+ msg.match[1]
     exec c, (err, stdout, stderr) ->
       msg.send stdout
+      msg.send stderr
+      msg.send err
 
   robot.respond /salt puppet ([^ ]+)\s*(\w*)/i, (msg) ->
     c = "/opt/hubot/bin/salt/salt_api.py --run-puppet "+ msg.match[1]
     exec c, (err, stdout, stderr) ->
       msg.send stdout
+      msg.send stderr
+      msg.send err
