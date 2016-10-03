@@ -14,7 +14,12 @@
 {spawn, exec}  = require 'child_process'
 module.exports = (robot) ->
 
+ robot.respond /elasticsearch list indices/i, (msg) ->
+    c = "/opt/hubot/bin/elasticsearch/elasticsearch.py --list_indices "
+    exec c, (err, stdout, stderr) ->
+      msg.send stdout
+
   robot.respond /elasticsearch remove index ([^ ]+)\s*(\w*)/i, (msg) ->
-    c = "/opt/hubot/bin/elasticsearch/elasticsearch.py "+ msg.match[1]
+    c = "/opt/hubot/bin/elasticsearch/elasticsearch.py --delete_index "+ msg.match[1]
     exec c, (err, stdout, stderr) ->
       msg.send stdout

@@ -9,7 +9,8 @@ import modules.indices as indices
 # Arguments for script
 def parse_args():
     parser = argparse.ArgumentParser(description='Salt API tool')
-    parser.add_argument('-d', '--delete_indices', action='store', help='Remove index from Elasticsearch cluster')
+    parser.add_argument('-l', '--list_all_indices', action='store', help='Lists all indices from Elasticsearch cluster')
+    parser.add_argument('-d', '--delete_index', action='store', help='Remove index from Elasticsearch cluster')
     args = parser.parse_args()
     return args
 
@@ -24,7 +25,9 @@ def main():
         print('Failed to connect to ES cluster')
         sys.exit(2)
 
-    if args.delete_index:
+    if args.list_all_indices:
+        indices.list_all(conn)
+    elif args.delete_index:
         indices.delete(args, conn)
     else:
         sys.exit()
