@@ -97,7 +97,7 @@ If the `x.coffee` script has an accompanying script/module you can place them in
 
 You can install the relevant dependencies needed for the script/module via it's `requirement.txt`
 
-	pip install -r equirements.txt
+	pip install -r requirements.txt
 
 
 ## To Do
