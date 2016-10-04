@@ -51,12 +51,36 @@ I wanted to be able to use Salt API to use `cmd.run` for remote execution on Sal
 
 For portability and as a way of sectioning off your various scripts/modules in your Hubot's `bin` directory, it's worth creating directories for each script/module and then reference them from your `x.coffee` script. Here's an example of how your Hubot's parent directory could look like.
 
-	|-bin
-	|---salt
-	|-----modules
-	|---elasticsearch
-	|-----modules
-	|-scripts
+```
++-- README.md
++-- external-scripts.json
++-- node_modules
++-- package.json
++-- procfile
++-- requirements.txt
++-- bin
+│   +-- elasticsearch
+│   │   +-- es_tool.py
+│   │   +-- modules
+│   │   │   +-- __init__.py
+│   │   │   +-- connection.py
+│   │   │   +-- environment.py
+│   │   │   \-- indices.py
+│   │   \-- requirements.txt
+│   \-- salt
+│       +-- modules
+│       │   +-- __init__.py
+│       │   +-- auth.py
+│       │   +-- environment.py
+│       │   +-- network.py
+│       │   \-- puppet.py
+│       +-- requirements.txt
+│       \-- salt_api.py
+\-- scripts
+    +-- elasticsearch.coffee
+    \-- salt.coffee
+
+```
 
 In the above example, both `salt` and `elasticsearch` are separate scripts/modules.
 
@@ -71,9 +95,9 @@ If the `x.coffee` script has an accompanying script/module you can place them in
 
 ### Dependencies
 
-You can install the relevat dependencies needed for the script/module via it's `requirement.txt`
+You can install the relevant dependencies needed for the script/module via it's `requirement.txt`
 
-	pip install -r /path/to/requirements.txt
+	pip install -r equirements.txt
 
 
 ## To Do
