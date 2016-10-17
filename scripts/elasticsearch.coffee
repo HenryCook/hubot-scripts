@@ -15,7 +15,7 @@
 module.exports = (robot) ->
 
  robot.respond /elasticsearch list indices/i, (msg) ->
-    c = "/opt/hubot/bin/elasticsearch/es_tool.py --list-all-indices "
+    c = "/opt/hubot/bin/elasticsearch/es_tool.py --list-all-indices"
     exec c, (err, stdout, stderr) ->
       msg.send stdout
       msg.send stderr
