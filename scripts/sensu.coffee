@@ -18,3 +18,10 @@ module.exports = (robot) ->
       msg.send stdout
       msg.send stderr
       msg.send err
+  
+  robot.respond /sensu clients info ([^ ]+)\s*(\w*)/i, (msg) ->
+      c = "/opt/hubot/bin/sensu/sensu_api.py --clients-info "+ msg.match[1]
+      exec c, (err, stdout, stderr) ->
+        msg.send stdout
+        msg.send stderr
+        msg.send err
