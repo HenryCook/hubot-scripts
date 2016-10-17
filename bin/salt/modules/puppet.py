@@ -11,6 +11,6 @@ def run(args, api_token):
 
     try:
         requests.post(environment.salt_api_endpoint, data=body, headers=headers, verify=False)
-        print("Puppet has finished running on " + puppet_tgt)
+        print("Puppet has finished running on '{target}'").format(target=puppet_tgt)
     except:
-        print("Unable to run Puppet on " + puppet_tgt)
+        print("Unable to run Puppet on '{target}'").format(target=puppet_tgt)

@@ -27,10 +27,10 @@ def main():
         sys.exit(2)
 
     if args.list_all_indices:
-        print('Attempting to list all indices in the ' + "'" + environment.elasticsearch_endpoint + "'" + " cluster")
+        print("Attempting to list all indices in the '{endpoint}' cluster").format(endpoint = environment.elasticsearch_endpoint)
         indices.list_all(conn)
     elif args.delete_index:
-        print('Attempting to remove the index ' + "'" + args.delete_index + "'" + ' from the ' + "'" + environment.elasticsearch_endpoint + "'" + ' cluster')
+        print("Attempting to remove the index '{delete}' from the '{endpoint}' cluster").format(delete=args.delete_index, endpoint = environment.elasticsearch_endpoint)
         indices.delete(args, conn)
     else:
         sys.exit()

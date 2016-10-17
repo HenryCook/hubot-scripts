@@ -11,6 +11,6 @@ def ping_minion(args, api_token):
 
     try:
         requests.post(environment.salt_api_endpoint, data=body, headers=headers, verify=False)
-        print("The Salt Master was able to successfully ping " + ping_tgt)
+        print("The Salt Master was able to successfully ping '{ping}'").format(ping=ping_tgt)
     except:
         print("The Salt Master is unable to ping the Salt Minion")

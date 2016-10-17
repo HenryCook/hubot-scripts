@@ -4,9 +4,9 @@ def delete(args, conn):
 
     try:
         conn.indices.delete(index=index_to_remove)
-        print("'" + index_to_remove + "'" + " has been removed")
+        print("The index '{remove}' has been removed").format(remove=index_to_remove)
     except:
-        print("Unable to delete the " + "'" + index_to_remove + "'" + " index")
+        print("Unable to delete the '{remove}' index").format(remove=index_to_remove)
 
 
 def list_all(conn):
@@ -14,4 +14,4 @@ def list_all(conn):
         for index in conn.indices.get('*'):
             print(index)
     except:
-        print("Unable to list al indices")
+        print("Unable to list all indices")

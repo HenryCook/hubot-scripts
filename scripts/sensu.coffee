@@ -5,7 +5,7 @@
 #   hubot sensu info - Returns some status information around Sensu.
 #
 # Configuration:
-#   SENSU_ENDPOINT - The endpoint for Sensu's REST API
+#   SENSU_ENDPOINT - The endpoint for Sensu's REST API e.g. http://sensu.ops.forward3d.com:4567 (notice the trailing '/')
 #
 # Author:
 #   HenryCook <henry@havingatinker.uk>

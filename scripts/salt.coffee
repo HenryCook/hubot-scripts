@@ -6,7 +6,7 @@
 #   hubot salt puppet <host> - Runs Puppet on Salt minion.
 #
 # Configuration:
-#   SALT_API_ENDPOINT - The endpoint for Salt's REST API
+#   SALT_API_ENDPOINT - The endpoint for Salt's REST API e.g. https://salt-master.foo.bar:8000
 #   SALT_API_USER - Salt API user
 #   SALT_API_PASSWORD - Salt API password
 #
