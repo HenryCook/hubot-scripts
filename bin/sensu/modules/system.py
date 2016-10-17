@@ -6,9 +6,11 @@ import json
 
 # Runs Puppet on requested Salt Minions
 def info():
+    endpoint = "{es}/info".format(es=environment.sensu_endpoint)
     try:
-        response = requests.get("http://" + environment.sensu_endpoint + "/info")
-        parsed = json.dumps(response.json(), indent=2)
-        print(parsed)
+        response = requests.get(endpoint)
+        parsed = response.json()
+        pretty = json.dumps(parsed, indent=2)
+        print(pretty)
     except:
-        print(parsed)
+        print(pretty)
