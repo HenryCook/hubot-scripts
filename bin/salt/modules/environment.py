@@ -7,5 +7,5 @@ try:
     salt_api_user = os.environ['SALT_API_USER']
     salt_api_password = os.environ['SALT_API_PASSWORD']
 except KeyError as i:
-    print("Error: The ", i, " environment variable has not been set")
+    print("Error: The {env} environment variable has not been set").format(env=i)
     sys.exit()

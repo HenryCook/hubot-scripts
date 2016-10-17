@@ -6,5 +6,5 @@ import sys
 try:
     elasticsearch_endpoint = os.environ['ELASTICSEARCH_ENDPOINT']
 except KeyError as i:
-    print("Error: The ", i, " environment variable has not been set")
+    print("Error: The {env} environment variable has not been set").format(env=i)
     sys.exit()
