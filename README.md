@@ -112,7 +112,7 @@ You can install the relevant dependencies needed for the script/module via it's 
     - Add option for auth, for when you require credentials
 
 - Sensu
-    - Remove client from Sensu
+    - Silence alarm
 
 
 ## Side note
