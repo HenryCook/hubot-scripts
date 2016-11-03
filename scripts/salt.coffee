@@ -19,6 +19,7 @@
 
 {spawn, exec}  = require 'child_process'
 module.exports = (robot) ->
+  
   robot.respond /salt ping ([^ ]+)\s*(\w*)/i, (msg) ->
     c = "/opt/hubot/bin/salt/salt_api.py --ping "+ msg.match[1]
     exec c, (err, stdout, stderr) ->
