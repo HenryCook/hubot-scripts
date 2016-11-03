@@ -3,6 +3,8 @@
 #
 # Commands:
 #   hubot sensu info - Returns some status information around Sensu.
+#   hubot sensu clients info <host> - Returns some information around the Sensu client.
+#   hubot sensu clients remove <host> - Removes the node from Sensu.
 #
 # Configuration:
 #   SENSU_ENDPOINT - The endpoint for Sensu's REST API e.g. http://sensu.ops.forward3d.com:4567 (notice the trailing '/')
