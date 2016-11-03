@@ -6,7 +6,7 @@
 #   hubot elasticsearch remove index <host> - Removes index from Elasticsearch Cluster.
 #
 # Configuration:
-#   ELASTICSEARCH_ENDPOINT - The endpoint for Salt's REST API e.g. http://elastic.search.com:80/ 
+#   ELASTICSEARCH_ENDPOINT - The endpoint for Salt's REST API e.g. http://elastic.search.com:80
 #
 # Author:
 #   HenryCook <henry@havingatinker.uk>

@@ -105,7 +105,7 @@ If the `x.coffee` script has an accompanying script/module you can place them in
 
 #### Python
 
-All the Python scripts use `Python 2.7`
+All the Python scripts use `Python 2.7`.
 
 You can install the relevant dependencies needed for the script/module via `requirement.txt`
 
