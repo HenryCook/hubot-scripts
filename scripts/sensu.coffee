@@ -3,7 +3,7 @@
 #
 # Commands:
 #   hubot sensu info - Returns some status information around Sensu.
-#   hubot sensu clients info <host> - Returns some information around the Sensu client.
+#   hubot sensu clients info <host> - Returns Sensu related client specific information.
 #   hubot sensu clients remove <host> - Removes the node from Sensu.
 #
 # Configuration:
