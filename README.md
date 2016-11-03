@@ -52,33 +52,41 @@ I wanted to be able to use Salt API to use `cmd.run` for remote execution on Sal
 For portability and as a way of sectioning off your various scripts/modules in your Hubot's `bin` directory, it's worth creating directories for each script/module and then reference them from your `x.coffee` script. Here's an example of how your Hubot's parent directory could look like.
 
 ```
-+-- README.md
-+-- external-scripts.json
-+-- node_modules
-+-- package.json
-+-- procfile
-+-- requirements.txt
-+-- bin
-│   +-- elasticsearch
-│   │   +-- es_tool.py
-│   │   +-- modules
-│   │   │   +-- __init__.py
-│   │   │   +-- connection.py
-│   │   │   +-- environment.py
-│   │   │   \-- indices.py
-│   │   \-- requirements.txt
-│   \-- salt
-│       +-- modules
-│       │   +-- __init__.py
-│       │   +-- auth.py
-│       │   +-- environment.py
-│       │   +-- network.py
-│       │   \-- puppet.py
-│       +-- requirements.txt
-│       \-- salt_api.py
-\-- scripts
-    +-- elasticsearch.coffee
-    \-- salt.coffee
+.
+├── procfile
+├── package.json
+├── node_modules
+├── external-scripts.json
+├── LICENSE
+├── README.md
+├── bin
+│   ├── elasticsearch
+│   │   ├── es_tool.py
+│   │   └── modules
+│   │       ├── __init__.py
+│   │       ├── connection.py
+│   │       ├── environment.py
+│   │       └── indices.py
+│   ├── salt
+│   │   ├── modules
+│   │   │   ├── __init__.py
+│   │   │   ├── auth.py
+│   │   │   ├── environment.py
+│   │   │   ├── network.py
+│   │   │   └── puppet.py
+│   │   └── salt_api.py
+│   └── sensu
+│       ├── modules
+│       │   ├── __init__.py
+│       │   ├── clients.py
+│       │   ├── environment.py
+│       │   └── system.py
+│       └── sensu_api.py
+├── requirements.txt
+└── scripts
+    ├── elasticsearch.coffee
+    ├── salt.coffee
+    └── sensu.coffee
 
 ```
 
@@ -95,7 +103,11 @@ If the `x.coffee` script has an accompanying script/module you can place them in
 
 ### Dependencies
 
-You can install the relevant dependencies needed for the script/module via it's `requirement.txt`
+#### Python
+
+All the Python scripts use `Python 2.7`
+
+You can install the relevant dependencies needed for the script/module via `requirement.txt`
 
 	pip install -r requirements.txt
 
