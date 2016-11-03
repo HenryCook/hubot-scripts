@@ -12,11 +12,11 @@ def get_token(args):
         pass
 
     request_body_data = {"username": environment.salt_api_user, "password": environment.salt_api_password, "eauth": "pam"}
-    endpoint = environment.salt_api_endpoint
-    print(endpoint)
+    
     try:
-        request_token = requests.post("{endpoint}/login", data=request_body_data, verify=False).format(endpoint=endpoint)
+        request_token = requests.post(environment.salt_api_endpoint + "/login", data=request_body_data, verify=False)
         api_token = request_token.json()['return'][0]['token']
         return api_token
-    except:
+    except Exception as e:
+        print(e)
         return False
