@@ -1,6 +1,6 @@
 # Elasticsearch
 elasticsearch==2.4.0
-urllib3[secure]==1.18
+urllib3[secure]==1.24.2
 
 # Salt/Sensu
 requests==2.9.1
